@@ -1,0 +1,274 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: white;
+  color: #222;
+}
+
+/* HEADER */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.95);
+  padding: 18px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  color: #c9a24d;
+  font-weight: 700;
+}
+
+nav a {
+  color: white;
+  margin-left: 25px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #c9a24d;
+}
+
+/* HERO */
+.hero {
+  height: 95vh;
+  background: linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)),
+    url("https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.hero h2 {
+  font-size: 55px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 14px 40px;
+  background: #c9a24d;
+  border-radius: 40px;
+  color: black;
+  text-decoration: none;
+}
+
+/* SECTIONS */
+section {
+  padding: 90px 60px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* PRODUCTS */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.product {
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.product:hover {
+  transform: translateY(-10px);
+}
+
+.product img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.product-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.price {
+    color: green;
+}
+
+.shop-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 25px;
+  background: black;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+}
+
+.shop-btn:hover {
+  background: #c9a24d;
+  color: black;
+}
+
+/* ABOUT */
+.about {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 50px;
+  align-items: center;
+}
+
+.about img {
+  border-radius: 25px;
+  width: 100%;
+}
+
+/* FAQ */
+.faq {
+  background: #f8f8f8;
+}
+
+.faq-box {
+  max-width: 800px;
+  margin: auto;
+  font-size: 16px;
+}
+
+.faq-box h4 {
+  margin-top: 25px;
+  color: #c9a24d;
+}
+
+/* CONTACT */
+form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea {
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 15px;
+  background: black;
+  color: white;
+  border-radius: 40px;
+  border: none;
+}
+
+button:hover {
+  background: #c9a24d;
+  color: black;
+}
+
+/* TESTIMONIALS */
+.testimonials {
+  background: #f8f8f8;
+}
+
+.testimonial-box {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  font-style: italic;
+}
+
+
+/* FOOTER */
+footer {
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
+
+footer a {
+  color: #c9a24d;
+  text-decoration: none;
+}
+
+/* WHATSAPP FLOAT */
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #25d366;
+  padding: 15px 18px;
+  border-radius: 50px;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.wa-text {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* HAMBURGER */
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+/* MOBILE */
+@media(max-width:768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    background: black;
+    width: 100%;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    padding: 20px 0;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* FADE ANIMATION */
+.fade-in {
+  animation: fadeUp 1s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
